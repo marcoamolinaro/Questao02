@@ -3,9 +3,7 @@ package br.com.sysmanager;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 import java.util.Scanner;
 
 import javax.swing.JFileChooser;
@@ -14,20 +12,11 @@ import javax.swing.filechooser.FileSystemView;
 
 public class Questao2 {  
 
-	private Map<String, String> mapTagLinhas = new HashMap<String, String>();
 	private List<String> resultados = new ArrayList<String>();
 	private File file;
 	
 	public Questao2() {}  
 	
-	public Map<String, String> getMapTagLinhas() {
-		return mapTagLinhas;
-	}
-
-	public void setMapTagLinhas(Map<String, String> mapTagLinhas) {
-		this.mapTagLinhas = mapTagLinhas;
-	}
-
 	public List<String> getResultados() {
 		return resultados;
 	}
@@ -73,7 +62,7 @@ public class Questao2 {
 		    
 		    linhas.addAll(Arrays.asList(linha.split("\n")));
 		        	    	    	
-	    	q2.extrai_resultado(linhas);
+	    	q2.extrairResultado(linhas);
 	    	
 	    	System.out.println("Resultado:");
 	    	
@@ -87,7 +76,7 @@ public class Questao2 {
 	    }
 	}
 	
-	public void extrai_resultado(List<String> linhas) {
+	public void extrairResultado (List<String> linhas) {
 		int posInicioTagAbertura = 0;
 		int posFinalTagAbertura = 0;
 		String tagAbertura = "";
